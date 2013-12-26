@@ -75,9 +75,23 @@ Getting them to compile is a matter of configuring a file watcher:
 
 3 configure to watch **Markdown Files**
 
+
+What Webstorm will do now:
+--------------------------
 So now all the `literate` bits look good, but the actual coffeescript
 is grey - **but** when I debug the project little js files are booted
 up for me.
+
+This means I can debug things, say when I run the tests through the IDE.
+
+Setting up to run tests from Webstorm
+-------------------------------------
+
+Here we need to create a new `configuration` and choose `nodeunit`.
+A suitable nodeunit `node_modules` folder is required to tell Webstorm
+where it is.
+
+The configuration can be set up to run all the tests in a folder, or a single file.
 
 
 

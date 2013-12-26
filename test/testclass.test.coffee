@@ -2,6 +2,7 @@ t = require "../src/testclass"
 
 exports.TestClassTest =
 
+#Can I compare two strings with nodeunit?
   'can use framework': (test) ->
     txt1 = "testvalue"
     test.equal(txt1, 'testvalue') #shouldn't it be equal(expected, actual) ?

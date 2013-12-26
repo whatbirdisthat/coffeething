@@ -1,6 +1,5 @@
 Literate Test Case
 ==================
-    t = require "../src/littestclass"
 
 
 This is a proof that certain fundamental things are achievable using nodejs and coffeescript
@@ -8,19 +7,20 @@ This is a proof that certain fundamental things are achievable using nodejs and 
 It is written in `literate-coffeescript` as an experiment in making my WebStorm bork so
 spectacularly that I totally switch back to vim muttering about the 50 bucks I gave to jetbrains
 
-    exports.TestClassTest =
+    lt = require "../src/littestclass"
+    exports.LitTestClassTest =
 
 1 Can I use **nodeunit** to compare a string with a string?
 
       'can use framework': (test) ->
         txt1 = "testvalue"
-        test.equal(txt1, 'qtestvalue') #shouldn't it be equal(expected, actual) ?
+        test.equal(txt1, 'testvalue') #shouldn't it be equal(expected, actual) ?
         test.done()
 
 2 Can I instantiate a new coffee class and run one of its methods?
 
       'can run methods coffee class': (test) ->
-        t1 = new t
+        t1 = new lt
         txt2 = t1.echo("testvalue2")
         test.equal(txt2, 'testvalue2') #shouldn't it be equal(expected, actual) ?
         test.done()
@@ -28,7 +28,7 @@ spectacularly that I totally switch back to vim muttering about the 50 bucks I g
 3 Can I use the constructor of a coffee class, then retrieve the value of a property?
 
       'can retrieve properties from coffee class': (test) ->
-        t1 = new t("mystring3")
+        t1 = new lt("mystring3")
         test.notEqual(t1, null)
         txt3 = t1.MyString
         test.equal(txt3, 'mystring3') #shouldn't it be equal(expected, actual) ?
@@ -37,7 +37,7 @@ spectacularly that I totally switch back to vim muttering about the 50 bucks I g
 4 Can I write a little string interpolator in the coffee class that uses the built-in interpolation coffee gives me?
 
       'can interpolate strings with coffee class': (test) ->
-        t1 = new t("mystring4")
+        t1 = new lt("mystring4")
         test.notEqual(t1, null)
         txt3 = t1.say('MyString4.1')
         test.equal(txt3, 'MyString4.1 - mystring4') #shouldn't it be equal(expected, actual) ?

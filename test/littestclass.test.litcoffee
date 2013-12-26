@@ -53,27 +53,9 @@ using the same interpreter etc - running from the webstorm ide, vim, etc
 If the above is all possible, and these tests pass from WebStorm and vim, then this is Very Good News
 
 Unfortunately WebStorm doesn't have the ability out of the box to handle `litcoffee` files yet
-and refuses to load any tests.
+and refuses to load any tests
 
 You can get around this by running `npm test` in the terminal window (or an actual terminal)
-
-Showing `.litcoffee` files as `.md` files
------------------------------------------
-I configured WebStorm to treat `.litcoffee` files as markdown files by associating the file extension
-in file.settings.file types.Markdown, this will get you markdown preview with grey code.
-
-Not ideal, but hey.
-
-Compiling `.litcoffee` files in WebStorm
-========================================
-
-Getting them to compile is a matter of configuring a file watcher:
-
-1 file.settings.ide settings.file watchers
-
-2 add new watcher, copy the "CoffeeScript" watcher
-
-3 configure to watch **Markdown Files**
 
 
 What Webstorm will do now:
@@ -92,6 +74,7 @@ A suitable nodeunit `node_modules` folder is required to tell Webstorm
 where it is.
 
 The configuration can be set up to run all the tests in a folder, or a single file.
+
 
 
 

@@ -28,6 +28,45 @@ embed markdown docs right there in the test files,
 so adding the human-readable usage docs to the source
 itself - they say good code has no comments, but
 there actually exists a place for good comments:
-in the tests
+in the tests!
+
+WebStorm
+========
+
+I quite like Webstorm. Which is lucky, because I paid for it.
+
+Webstorm makes tracing mouse-wavable, one thing my vim console will almost certainly
+never do.
+
+Unfortunately WebStorm doesn't have the ability out of the box to handle `litcoffee` files yet
+and refuses to load any tests.
+
+You can get around this by running `npm test` in the terminal window (or an actual terminal)
+
+Showing `.litcoffee` files as `.md` files
+-----------------------------------------
+I configured WebStorm to treat `.litcoffee` files as markdown files by associating the file extension
+in file.settings.file types.Markdown, this will get you markdown preview with grey code.
+
+Not ideal, but hey.
+
+Compiling `.litcoffee` files in WebStorm
+========================================
+
+Getting them to compile is a matter of configuring a file watcher:
+
+1 file.settings.ide settings.file watchers
+
+2 add new watcher - copy the "CoffeeScript" watcher
+
+3 configure to watch **Markdown Files**
+
+Setting up this file watcher will produce some compiled gear each time
+you hit the debug button.
+
+So now all the `literate` bits look good, but the actual coffeescript
+is grey - **but** when I debug the project little js files are booted
+up for me.
+
 
 

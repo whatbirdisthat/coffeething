@@ -1,29 +1,17 @@
 Literate Web Class
 ===================
 
-you're better off editing this in vim than you are IntelliJ
-
-just sayin
-
+This is a class to prove that we can get data from places
 
     class LitWebClass
 
-      constructor: (mystring) ->
-        @MyString = mystring
-
-We can ECHO a string back to you, for connectivity testing
-
-      echo: (astring) ->
-        return astring
-
-We can use the built in string templating we get from coffee
-
-      say: (something) ->
-        return "#{something} - #{@MyString}"
-
+The GetJson method is really just a simple key-value pair
+thing.
 
       GetJson: (name, value) ->
-        return '{ "' + name  + '": "' + value + '" }'
+        return JSON.parse('{ "' + name  + '": "' + value + '" }')
+
+Very important line of code:
 
     module.exports = LitWebClass
 

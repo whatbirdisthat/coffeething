@@ -9,7 +9,6 @@ achievable using nodejs and coffeescript
     WebClass = require "../src/litwebclass"
     expectedjson = JSON.parse '{ "audusd": 90 }'
 
-Given I have a literate WebClass
 When I call GetJson
 Then Json is what I get
 
@@ -17,6 +16,7 @@ Then Json is what I get
       'can recover json': (test) ->
         txt1 = "audusd"
         txt2 = "90"
+1 Given I have a literate WebClass
         w = new WebClass
         newData = w.GetJson(txt1, txt2)
         test.equal(newData.audusd, expectedjson.audusd)

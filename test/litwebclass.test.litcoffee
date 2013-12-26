@@ -24,7 +24,7 @@ Then Json is what I get
         test.equal(newData.audusd, expectedjson.audusd)
         test.done()
 
-If the tests in this file pass it is possible to load json from a url
+If the tests in this file pass it is possible to load json from the WebClass
 
 
 /

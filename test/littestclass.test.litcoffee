@@ -53,7 +53,7 @@ using the same interpreter etc - running from the webstorm ide, vim, etc
 If the above is all possible, and these tests pass from WebStorm and vim, then this is Very Good News
 
 Unfortunately WebStorm doesn't have the ability out of the box to handle `litcoffee` files yet
-and refuses to load any tests
+and refuses to load any tests.
 
 You can get around this by running `npm test` in the terminal window (or an actual terminal)
 

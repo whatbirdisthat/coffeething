@@ -33,9 +33,9 @@ in the tests!
 WebStorm
 ========
 
-I quite like Webstorm. Which is lucky, because I paid for it.
+I quite like WebStorm. Which is lucky, because I paid for it.
 
-Webstorm makes tracing mouse-wavable, one thing my vim console will almost certainly
+WebStorm makes tracing mouse-wavable, one thing my vim console will almost certainly
 never do.
 
 Unfortunately WebStorm doesn't have the ability out of the box to handle `litcoffee` files yet
@@ -68,7 +68,7 @@ So now all the `literate` bits look good, but the actual coffeescript
 is grey - **but** when I debug the project little js files are booted
 up for me.
 
-What Webstorm will do now:
+What WebStorm will do now:
 --------------------------
 So now all the `literate` bits look good, but the actual coffeescript
 is grey - **but** when I debug the project little js files are booted
@@ -76,7 +76,7 @@ up for me.
 
 This means I can debug things, say when I run the tests through the IDE.
 
-Setting up to run tests from Webstorm
+Setting up to run tests from WebStorm
 -------------------------------------
 
 Here we need to create a new `configuration` and choose `nodeunit`.

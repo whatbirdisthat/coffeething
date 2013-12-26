@@ -16,7 +16,7 @@ Given I have a literate webclass
         @w = new WebClass()
         callback()
 
-When I call GetJsonFromGoogle
+When I call GetJson
 
       'can recover json': (test) ->
         txt1 = "audusd"
@@ -25,7 +25,7 @@ When I call GetJsonFromGoogle
 
 Then Json is what I get
 
-        expectedjson = JSON.parse '{ "audusd": "90" }'
+        expectedjson = JSON.parse '{ "audusd": 90 }'
         test.equal(newData.audusd, expectedjson.audusd)
         test.equal(newData.audusd, 90)
         test.done()

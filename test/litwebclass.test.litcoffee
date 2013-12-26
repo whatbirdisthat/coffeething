@@ -10,7 +10,9 @@ achievable using nodejs and coffeescript
     expectedjson = JSON.parse '{ "audusd": 90 }'
 
 Given I have a literate WebClass
+
 When I call GetJson
+
 Then Json is what I get
 
     exports.LitWebClassTest =

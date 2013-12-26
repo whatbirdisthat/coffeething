@@ -51,7 +51,7 @@ in file.settings.file types.Markdown, this will get you markdown preview with gr
 Not ideal, but hey.
 
 Compiling `.litcoffee` files in WebStorm
-========================================
+----------------------------------------
 
 Getting them to compile is a matter of configuring a file watcher:
 

@@ -26,8 +26,8 @@ When I call GetJsonFromGoogle
 Then Json is what I get
 
         expectedjson = JSON.parse '{ "audusd": "90" }'
-        test.equal(newData.audusd, expectedjson.audusd) #shouldn't it be equal(expected, actual) ?
-        test.equal(newData.audusd, 90) #shouldn't it be equal(expected, actual) ?
+        test.equal(newData.audusd, expectedjson.audusd)
+        test.equal(newData.audusd, 90)
         test.done()
 
 

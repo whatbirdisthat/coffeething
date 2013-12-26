@@ -1,5 +1,6 @@
 Literate Web Class Test Case
 ============================
+###HttpClient     = require 'scoped-http-client'
 
 
 This is a proof that certain fundamental things are achievable using nodejs and coffeescript
@@ -10,8 +11,9 @@ This is a proof that certain fundamental things are achievable using nodejs and 
 
 1 Given I have a literate webclass
 
-      setup: (callback) ->
+      setUp: (callback) ->
         @w = new WebClass()
+        callback()
 
 2 When I call GetJsonFromGoogle
 
@@ -22,7 +24,9 @@ This is a proof that certain fundamental things are achievable using nodejs and 
 
 3 Then Json is what I get
 
-        test.equal(newData, '{ "audusd": "90" }') #shouldn't it be equal(expected, actual) ?
+        expectedjson = JSON.parse '{ "audusd": "90" }'
+        test.equal(newData.audusd, expectedjson.audusd) #shouldn't it be equal(expected, actual) ?
+        test.equal(newData.audusd, 90) #shouldn't it be equal(expected, actual) ?
         test.done()
 
 

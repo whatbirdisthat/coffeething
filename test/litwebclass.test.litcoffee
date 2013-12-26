@@ -7,32 +7,20 @@ This is a proof that certain fundamental things are
 achievable using nodejs and coffeescript
 
     WebClass = require "../src/litwebclass"
+    expectedjson = JSON.parse '{ "audusd": 90 }'
 
-    class LitWebClassTest
-
-Given I have a literate webclass
-
-      setUp: (callback) ->
-        @w = new WebClass()
-        callback()
-
+Given I have a literate WebClass
 When I call GetJson
+Then Json is what I get
 
+    exports.LitWebClassTest =
       'can recover json': (test) ->
         txt1 = "audusd"
         txt2 = "90"
-        newData = @w.GetJson(txt1, txt2)
-
-Then Json is what I get
-
-        expectedjson = JSON.parse '{ "audusd": 90 }'
+        w = new WebClass
+        newData = w.GetJson(txt1, txt2)
         test.equal(newData.audusd, expectedjson.audusd)
-        test.equal(newData.audusd, 90)
         test.done()
-
-
-    exports.LitWebClassTest = LitWebClassTest
-
 
 If the tests in this file pass it is possible to load json from a url
 

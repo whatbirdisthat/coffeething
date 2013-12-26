@@ -12,7 +12,6 @@ why **coffeething** ?
 
 Basically the coffeething is here just so I can prove
 a few things to myself, like:
-
 * can I define a class in a coffee file, and require it from another
 * can I push objects to the constructor of a coffee class
 * can I access properties of a coffee class

@@ -3,7 +3,7 @@ Literate Test Case
 
 This is a proof that certain fundamental things are achievable using nodejs and coffeescript
 
-It is written in `literate-coffeescript` as an experiment in making my IDE bork so
+It is written in `literate-coffeescript` as an experiment in making my WebStorm bork so
 spectacularly that I totally switch back to vim muttering about the 50 bucks I gave to jetbrains
 
 
@@ -15,7 +15,7 @@ spectacularly that I totally switch back to vim muttering about the 50 bucks I g
 
     'can use framework': (test) ->
       txt1 = "testvalue"
-      test.equal(txt1, 'testvalue') #shouldn't it be equal(expected, actual) ?
+      test.equal(txt1, 'qtestvalue') #shouldn't it be equal(expected, actual) ?
       test.done()
 
 * Can I instantiate a new coffee class and run one of its methods?

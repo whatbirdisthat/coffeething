@@ -14,7 +14,8 @@ We can ECHO a string back to you, for connectivity testing
     echo: (astring) ->
       return astring
 
-We can use the string t
+We can use the built in string templating we get from coffee
+
     say: (something) ->
       return "#{something} - #{@MyString}"
 

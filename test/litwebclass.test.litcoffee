@@ -9,6 +9,7 @@ This is a proof that certain fundamental things are achievable using nodejs and 
     exports.LitWebClassTest =
 
 1 Given I have a literate webclass
+
       setup: (callback) ->
         @w = new WebClass()
 

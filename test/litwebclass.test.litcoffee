@@ -1,9 +1,9 @@
 Literate Web Class Test Case
 ============================
-`HttpClient     = require 'scoped-http-client'`
+_HttpClient     = require 'scoped-http-client'_
 
 
-This is a proof that certain fundamental things are 
+This is a proof that certain fundamental things are
 achievable using nodejs and coffeescript
 
     WebClass = require "../src/litwebclass"

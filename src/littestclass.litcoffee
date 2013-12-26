@@ -1,7 +1,7 @@
 Literate Test Class
 ===================
 
-you're better off editing this in vim than you are IntelliJ unfortunately
+you're better off editing this in vim than you are IntelliJ or Webstorm
 just sayin
 
     class LitTestClass
@@ -19,5 +19,6 @@ We can use the built in string templating we get from coffee
       say: (something) ->
         return "#{something} - #{@MyString}"
 
+Very important line of code:
 
     module.exports = LitTestClass

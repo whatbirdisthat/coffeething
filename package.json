@@ -2,8 +2,8 @@
   "name": "coffeething",
   "version": "0.0.1",
   "scripts": {
-    "testwin": ".\\node_modules\\.bin\\nodeunit test",
-    "test": "./node_modules/.bin/nodeunit test/*"
+    "test": "./node_modules/.bin/nodeunit test/*",
+    "testwin": ".\\node_modules\\.bin\\nodeunit test"
   },
   "dependencies": {
     "coffee-script": "~1.6.3",

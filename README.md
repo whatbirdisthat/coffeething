@@ -83,7 +83,17 @@ Here we need to create a new `configuration` and choose `nodeunit`.
 A suitable nodeunit `node_modules` folder is required to tell Webstorm
 where it is.
 
-The configuration can be set up to run all the tests in a folder, or a single file.
+The run/debug configuration can be set up to run
+all the tests in a folder, or a single file.
+
+Adding this to your package.json will also help:
+
+    "scripts": {
+      "test": "./node_modules/.bin/nodeunit test/*"
+    }
+
+Then you can run `npm test` and all files in the folder will be read -
+not just those named class.test.coffee which npm seems to want to do.
 
 
 

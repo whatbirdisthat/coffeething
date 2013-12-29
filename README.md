@@ -48,7 +48,8 @@ Showing `.litcoffee` files as `.md` files
 I configured WebStorm to treat `.litcoffee` files as markdown files by associating the file extension
 in file.settings.file types.Markdown, this will get you markdown preview with grey code.
 
-Not ideal, but hey.
+Not ideal, but hey. Also, and this is a bit of a thing - you cannot set breakpoints in a `.litcoffee` file
+if you do this...
 
 Compiling `.litcoffee` files in WebStorm
 ----------------------------------------
@@ -68,6 +69,8 @@ So now all the `literate` bits look good, but the actual coffeescript
 is grey - **but** when I debug the project little js files are booted
 up for me.
 
+So ok, we can't set breakpoints. Bit of a dealbreaker.
+
 What WebStorm will do now:
 --------------------------
 So now all the `literate` bits look good, but the actual coffeescript
@@ -75,6 +78,8 @@ is grey - **but** when I debug the project little js files are booted
 up for me.
 
 This means I can debug things, say when I run the tests through the IDE.
+
+But the quality of debugging is well, low.
 
 Setting up to run tests from WebStorm
 -------------------------------------
@@ -93,8 +98,16 @@ Adding this to your package.json will also help:
     }
 
 Then you can run `npm test` and all files in the folder will be read -
-not just those named class.test.coffee which npm seems to want to do.
+not just those named [class].test.coffee which npm seems to want to do.
 
+The verdict.
+------------
+
+So - it turns out to be just easier to edit these things in vim,
+and when it comes time to debug/trace just run node-inspector,
+using a chromey browser to connect.
+
+The WebStorm tools are not up to it just yet.
 
 
 

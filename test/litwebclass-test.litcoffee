@@ -10,7 +10,7 @@ Given I have a literate WebClass
 
     WebClass = require "../src/litwebclass"
 
-And I call GetJson
+When I call GetJson
 
     expectedjson = JSON.parse '{ "audusd": 90 }'
 

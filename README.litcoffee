@@ -66,14 +66,6 @@ Problem is, I couldn't get `nodeunit test\\*.*` to work. That means no expando, 
 `*.coffee` in our suite when we run `npm test`. The way around this is explained below, in Windows
 World, with WebStorm, by associating the filetype `*.litcoffee` with a watcher.
 
-The verdict.
-------------
-
-So - it turns out to be just easier to edit these things in vim,
-and when it comes time to debug/trace just run node-inspector,
-using a chromey browser to connect.
-
-The WebStorm tools are not up to it just yet.
 
 
 

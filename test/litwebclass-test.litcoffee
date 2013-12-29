@@ -6,12 +6,13 @@ _HttpClient     = require 'scoped-http-client'_
 This is a proof that certain fundamental things are
 achievable using nodejs and coffeescript
 
-    WebClass = require "../src/litwebclass"
-    expectedjson = JSON.parse '{ "audusd": 90 }'
-
 Given I have a literate WebClass
 
+    WebClass = require "../src/litwebclass"
+
 When I call GetJson
+
+    expectedjson = JSON.parse '{ "audusd": 90 }'
 
 Then Json is what I get
 

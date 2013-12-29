@@ -4,22 +4,32 @@ coffeething
 the purpose of the **coffeething** is to be very basic
 
 where possible it is written in
+
 * coffeescript or even better
+
 * literate coffeescript
 
-why **coffeething** ?
+Why **coffeething** ?
 ---------------------
 
 Basically the coffeething is here just so I can prove
 a few things to myself, like:
+
 * can I define a class in a coffee file, and require it from another
+
 * can I push objects to the constructor of a coffee class
+
 * can I access properties of a coffee class
+
 * can I run the methods of a coffee class
 
-See, very basic stuff.
+And, I want to compare the experience using
 
-why **literate-coffeescript** ?
+* `vim` in *nix World and
+
+* `WebStorm` in Windows World
+
+Why **literate-coffeescript** ?
 -------------------------------
 
 This is where it gets kinda cool (I think) because
@@ -28,77 +38,33 @@ embed markdown docs right there in the test files,
 so adding the human-readable usage docs to the source
 itself - they say good code has no comments, but
 there actually exists a place for good comments:
-in the tests!
 
-WebStorm
-========
+In the tests!
 
-I quite like WebStorm. Which is lucky, because I paid for it.
+Testing literate coffeescript
+-----------------------------
+With `vim/node-inspector`:
 
-WebStorm makes tracing mouse-wavable, one thing my vim console will almost certainly
-never do.
-
-Unfortunately WebStorm doesn't have the ability out of the box to handle `litcoffee` files yet
-and refuses to load any tests.
-
-You can get around this by running `npm test` in the terminal window (or an actual terminal)
-
-Showing `.litcoffee` files as `.md` files
------------------------------------------
-I configured WebStorm to treat `.litcoffee` files as markdown files by associating the file extension
-in file.settings.file types.Markdown, this will get you markdown preview with grey code.
-
-Not ideal, but hey. Also, and this is a bit of a thing - you cannot set breakpoints in a `.litcoffee` file
-if you do this...
-
-Compiling `.litcoffee` files in WebStorm
-----------------------------------------
-
-Getting them to compile is a matter of configuring a file watcher:
-
-1 file.settings.ide settings.file watchers
-
-2 add new watcher - copy the "CoffeeScript" watcher
-
-3 configure to watch **Markdown Files**
-
-Setting up this file watcher will produce some compiled gear each time
-you hit the debug button.
-
-So now all the `literate` bits look good, but the actual coffeescript
-is grey - **but** when I debug the project little js files are booted
-up for me.
-
-So ok, we can't set breakpoints. Bit of a dealbreaker.
-
-What WebStorm will do now:
---------------------------
-So now all the `literate` bits look good, but the actual coffeescript
-is grey - **but** when I debug the project little js files are booted
-up for me.
-
-This means I can debug things, say when I run the tests through the IDE.
-
-But the quality of debugging is well, low.
-
-Setting up to run tests from WebStorm
--------------------------------------
-
-Here we need to create a new `configuration` and choose `nodeunit`.
-A suitable nodeunit `node_modules` folder is required to tell Webstorm
-where it is.
-
-The run/debug configuration can be set up to run
-all the tests in a folder, or a single file.
-
-Adding this to your package.json will also help:
+Add this to package.json will give npm a script to run when called with `npm test`:
 
     "scripts": {
       "test": "./node_modules/.bin/nodeunit test/*"
     }
 
-Then you can run `npm test` and all files in the folder will be read -
-not just those named [class].test.coffee which npm seems to want to do.
+Note the `/*` in the test script - npm test can apply to a folder, or a list of files.
+In a real shell, the `/*` is expanded and each result appended to the command parameters.
+`npm test` then runs all the files in the folder `test`
+not just those named [class].test.coffee which npm seems to want to do by default.
+
+If you are in Windows World, use this:
+
+    "scripts": {
+      "test": ".\\node_modules\\.bin\\nodeunit test"
+    }
+
+Problem is, I couldn't get `nodeunit test\\*.*` to work. That means no expando, and we only get
+`*.coffee` in our suite when we run `npm test`. The way around this is explained below, in Windows
+World, with WebStorm, by associating the filetype `*.litcoffee` with a watcher.
 
 The verdict.
 ------------
@@ -111,3 +77,5 @@ The WebStorm tools are not up to it just yet.
 
 
 
+/
+========

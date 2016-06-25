@@ -54,7 +54,7 @@ Add this to package.json will give npm a script to run when called with `npm tes
 Note the `/*` in the test script - npm test can apply to a folder, or a list of files.
 In a real shell, the `/*` is expanded and each result appended to the command parameters.
 `npm test` then runs all the files in the folder `test`
-not just those named [class].test.coffee which npm seems to want to do by default.
+not just those named `[class].test.coffee` which npm seems to want to do by default.
 
 If you are in Windows World, use this:
 
@@ -62,11 +62,11 @@ If you are in Windows World, use this:
       "test": ".\\node_modules\\.bin\\nodeunit test"
     }
 
-Problem is, I couldn't get `nodeunit test\\*.*` to work. That means no expando, and we only get
-`*.coffee` in our suite when we run `npm test`. The way around this is explained below, in Windows
-World, with WebStorm, by associating the filetype `*.litcoffee` with a watcher.
+Problem is, I couldn't get `nodeunit test\\*.*` to work. Because it's not a shell glob, we only get
+`*.coffee` in our suite when we run `npm test`. The way around this, in Windows
+World with WebStorm, is by associating the filetype `*.litcoffee` with a watcher.
 
-
+Or just don't use windows.
 
 
 /

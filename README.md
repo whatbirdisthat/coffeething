@@ -1,6 +1,9 @@
 coffeething
 ===========
 
+[ ![Codeship Status for whatbirdisthat/coffeething](https://codeship.com/projects/46220800-1caf-0134-8b5a-5a5ce544b1da/status?branch=master)](https://codeship.com/projects/159935)
+
+
 the purpose of the **coffeething** is to be very basic
 
 where possible it is written in
